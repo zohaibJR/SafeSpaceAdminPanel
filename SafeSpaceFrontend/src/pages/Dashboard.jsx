@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import AdminLayout from "../components/AdminLayout";
 import { useNavigate } from "react-router-dom";
-
-const API = "http://localhost:5000/api";
+import AdminLayout from "../components/AdminLayout";
+import API from "../config/api.js";
 
 function StatCard({ icon, value, label, variant }) {
   return (

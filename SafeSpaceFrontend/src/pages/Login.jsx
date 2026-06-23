@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API from "../config/api";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -14,12 +15,19 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/admin/login", form);
+      const response = await axios.post(`${API}/admin/login`, form);
 
-      localStorage.setItem("token", "loggedin");
+      // If your backend returns a token:
+      if (response.data?.token) {
+        localStorage.setItem("token", response.data.token);
+      } else {
+        // Fallback if backend doesn't return a token yet
+        localStorage.setItem("token", "loggedin");
+      }
+
       navigate("/dashboard");
     } catch (err) {
-      alert("Invalid Credentials");
+      alert(err.response?.data?.message || "Invalid Credentials");
     }
   };
 
