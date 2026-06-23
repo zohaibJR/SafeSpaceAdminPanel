@@ -56,7 +56,6 @@ export default function App() {
         <Route path="/login" element={<Login />} />
 
         {/* Protected Admin Routes */}
-
         <Route
           path="/dashboard"
           element={
@@ -146,6 +145,9 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* Catch-all Route */}
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );

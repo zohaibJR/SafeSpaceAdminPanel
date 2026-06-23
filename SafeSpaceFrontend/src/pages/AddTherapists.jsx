@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../components/AdminLayout";
-
-const API = "http://localhost:5000/api";
+import API from "../config/api.js";
 
 export default function AddTherapists() {
   const navigate = useNavigate();
