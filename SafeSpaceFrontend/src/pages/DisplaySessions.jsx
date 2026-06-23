@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../components/AdminLayout";
 
-const API = "http://localhost:5000/api";
+const API = "https://safespaceadminbackend.onrender.com/api";
 
 function fmt(n) {
   return "Rs " + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 });

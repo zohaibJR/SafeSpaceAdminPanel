@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/admin/login", form);
+      await axios.post("https://safespaceadminbackend.onrender.com/api/admin/login", form);
 
       localStorage.setItem("token", "loggedin");
       navigate("/dashboard");

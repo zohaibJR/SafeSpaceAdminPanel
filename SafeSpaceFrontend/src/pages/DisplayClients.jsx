@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../components/AdminLayout";
 
-const API = "http://localhost:5000/api";
+const API = "https://safespaceadminbackend.onrender.com/api";
 
 function initials(name = "") {
   return name.split(" ").map((w) => w[0]).join("").toUpperCase().slice(0, 2);

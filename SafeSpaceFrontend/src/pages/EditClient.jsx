@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import AdminLayout from "../components/AdminLayout";
 
-const API = "http://localhost:5000/api";
+const API = "https://safespaceadminbackend.onrender.com/api";
 
 export default function EditClient() {
   const { id } = useParams();

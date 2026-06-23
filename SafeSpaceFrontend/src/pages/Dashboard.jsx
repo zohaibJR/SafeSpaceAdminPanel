@@ -3,7 +3,7 @@ import axios from "axios";
 import AdminLayout from "../components/AdminLayout";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://localhost:5000/api";
+const API = "https://safespaceadminbackend.onrender.com/api";
 
 function StatCard({ icon, value, label, variant }) {
   return (
